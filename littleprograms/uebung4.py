@@ -1,4 +1,13 @@
 class Hund:  # Name in großge. CamelCase
+    """ Hundeklasee
+
+        Attribute:
+        -------------
+        name: str
+        Name des Hundes
+
+        age: int
+        Alter des Hundes"""
 
     species = 'Canis lupus familiaris'  # Klassenattri.
     zaehler = 0  # soll mitzählen wieviele Objekte gerade leben
@@ -30,6 +39,7 @@ class Hund:  # Name in großge. CamelCase
 
 
     def __repr__(self):
+        """returns 'Hund (name), (age)'"""
         return f'Hund(name={self.name}, age={self.age})'
 
     def __str__(self):
@@ -39,6 +49,7 @@ class Hund:  # Name in großge. CamelCase
             Hund.zaehler -= 1
 
     def gib_laut(self):
+        """hund gibt laut"""
         print(f'{self.name} bellt')
         if self.__gassi_gegangen:
             print("wedelt mit Schwanz weil sich Hund freut")
